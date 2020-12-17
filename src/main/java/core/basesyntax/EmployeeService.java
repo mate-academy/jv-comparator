@@ -10,11 +10,9 @@ public class EmployeeService {
         Comparator<Employee> comparator = new Comparator<Employee>() {
             @Override
             public int compare(Employee employee1, Employee employee2) {
-                if (employee1.getAge() < employee2.getAge()) {
-                    return -1;
-                }
-                if (employee1.getAge() > employee2.getAge()) {
-                    return 1;
+                int compareAge = Integer.compare(employee1.getAge(), employee2.getAge());
+                if (compareAge != 0) {
+                    return compareAge;
                 }
                 return employee1.getName().compareTo(employee2.getName());
             }
