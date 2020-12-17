@@ -1,10 +1,26 @@
 package core.basesyntax;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class EmployeeService {
     public Set<Employee> getEmployByOrder(List<Employee> employees) {
-        return null;
+        Comparator<Employee> comparator = new Comparator<Employee>() {
+            @Override
+            public int compare(Employee employee1, Employee employee2) {
+                if (employee1.getAge() < employee2.getAge()) {
+                    return -1;
+                }
+                if (employee1.getAge() > employee2.getAge()) {
+                    return 1;
+                }
+                return employee1.getName().compareTo(employee2.getName());
+            }
+        };
+        Set<Employee> employeeSet = new TreeSet<>(comparator);
+        employeeSet.addAll(employees);
+        return employeeSet;
     }
 }
