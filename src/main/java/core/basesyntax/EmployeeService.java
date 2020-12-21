@@ -10,9 +10,9 @@ public class EmployeeService {
         Comparator<Employee> employeeComparator = new Comparator<>() {
             @Override
             public int compare(Employee employeeOne, Employee employeeTwo) {
-                int checkAge = Integer.compare(employeeOne.getAge(), employeeTwo.getAge());
-                if (checkAge != 0) {
-                    return checkAge;
+                int checkCompareAge = Integer.compare(employeeOne.getAge(), employeeTwo.getAge());
+                if (checkCompareAge != 0) {
+                    return checkCompareAge;
                 }
                 return employeeOne.getName().compareTo(employeeTwo.getName());
             }
@@ -21,5 +21,4 @@ public class EmployeeService {
         employeeSet.addAll(employees);
         return employeeSet;
     }
-
 }
