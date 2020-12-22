@@ -18,9 +18,7 @@ public class EmployeeService {
             }
         };
         Set<Employee> result = new TreeSet<>(employeeComparator);
-        for (Employee employee : employees) {
-            result.add(employee);
-        }
+        result.addAll(employees);
         return result;
     }
 }
