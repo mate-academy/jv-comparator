@@ -10,7 +10,6 @@ public class EmployeeComparator implements Comparator<Employee> {
         if (compareAge != 0) {
             return compareAge;
         }
-
         return employee1.getName().compareTo(employee2.getName());
     }
 }
