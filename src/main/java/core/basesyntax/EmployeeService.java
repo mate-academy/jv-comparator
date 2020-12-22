@@ -9,12 +9,12 @@ public class EmployeeService {
     public Set<Employee> getEmployByOrder(List<Employee> employees) {
         Comparator<Employee> employeeComparator = new Comparator<>() {
             @Override
-            public int compare(Employee user1, Employee user2) {
-                int result = Integer.compare(user1.getAge(), user2.getAge());
+            public int compare(Employee employee1, Employee employee2) {
+                int result = Integer.compare(employee1.getAge(), employee2.getAge());
                 if (result != 0) {
                     return result;
                 }
-                return user1.getName().compareTo(user2.getName());
+                return employee1.getName().compareTo(employee2.getName());
             }
         };
         Set<Employee> employeeSet = new TreeSet<>(employeeComparator);
