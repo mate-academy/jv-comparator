@@ -7,18 +7,18 @@ import java.util.TreeSet;
 
 public class EmployeeService {
     public Set<Employee> getEmployByOrder(List<Employee> employees) {
-        Comparator<Employee> employeeComparator = new Comparator<Employee>() {
+        Comparator<Employee> employeeComparator = new Comparator<>() {
             @Override
-            public int compare(Employee o1, Employee o2) {
-                int comparedAge = Integer.compare(o1.getAge(), o2.getAge());
+            public int compare(Employee employee1, Employee employee2) {
+                int comparedAge = Integer.compare(employee1.getAge(), employee2.getAge());
                 if (comparedAge != 0) {
                     return comparedAge;
                 }
-                return o1.getName().compareTo(o2.getName());
+                return employee1.getName().compareTo(employee2.getName());
             }
         };
-        Set<Employee> set = new TreeSet<>(employeeComparator);
-        set.addAll(employees);
-        return set;
+        Set<Employee> employeesSet = new TreeSet<>(employeeComparator);
+        employeesSet.addAll(employees);
+        return employeesSet;
     }
 }
