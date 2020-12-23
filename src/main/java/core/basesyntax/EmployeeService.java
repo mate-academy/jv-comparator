@@ -8,11 +8,11 @@ import java.util.TreeSet;
 public class EmployeeService {
     Comparator<Employee> employeeComparator = new Comparator<Employee>() {
         @Override
-        public int compare(Employee employee1, Employee employee2) {
-            if (employee1.getAge() != employee2.getAge()) {
-                return Integer.compare(employee1.getAge(), employee2.getAge());
+        public int compare(Employee first, Employee second) {
+            if (first.getAge() != second.getAge()) {
+                return Integer.compare(first.getAge(), second.getAge());
             }
-            return employee1.getName().compareTo(employee2.getName());
+            return first.getName().compareTo(second.getName());
         }
     };
 
