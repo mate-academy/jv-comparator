@@ -9,7 +9,7 @@ public class EmployeeService {
     Set<Employee> employeeSet;
 
     public Set<Employee> getEmployByOrder(List<Employee> employees) {
-        Comparator<Employee> employeeComparator = new Comparator<Employee>() {
+        Comparator<Employee> employeeComparator = new Comparator<>() {
             @Override
             public int compare(Employee employeeOne, Employee employeeTwo) {
                 int compareEmployee = Integer.compare(employeeOne.getAge(), employeeTwo.getAge());
