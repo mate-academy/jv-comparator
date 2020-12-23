@@ -8,12 +8,12 @@ import java.util.TreeSet;
 public class EmployeeService {
     Comparator<Employee> employeeComparator = new Comparator<Employee>() {
         @Override
-        public int compare(Employee o1, Employee o2) {
-            int howIsYonger = Integer.compare(o1.getAge(), o2.getAge());
+        public int compare(Employee firstEmployee, Employee secondEmployee) {
+            int howIsYonger = Integer.compare(firstEmployee.getAge(), secondEmployee.getAge());
             if (howIsYonger != 0) {
                 return howIsYonger;
             }
-            return o1.getName().compareTo(o2.getName());
+            return firstEmployee.getName().compareTo(secondEmployee.getName());
         }
 
     };
