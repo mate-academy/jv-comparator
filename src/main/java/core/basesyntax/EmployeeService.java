@@ -17,8 +17,8 @@ public class EmployeeService {
                 return firstEmployee.getName().compareTo(secondEmployee.getName());
             }
         };
-        Set<Employee> sortedEmployeeSet = new TreeSet<>(employeeComparator);
-        sortedEmployeeSet.addAll(employees);
-        return sortedEmployeeSet;
+        Set<Employee> employeeSet = new TreeSet<>(employeeComparator);
+        employeeSet.addAll(employees);
+        return employeeSet;
     }
 }
