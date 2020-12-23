@@ -6,11 +6,14 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class EmployeeService {
-    Comparator<Employee> employeeComparator = (employee1, employee2) -> {
-        if (employee1.getAge() != employee2.getAge()) {
-            return Integer.compare(employee1.getAge(), employee2.getAge());
+    Comparator<Employee> employeeComparator = new Comparator<Employee>() {
+        @Override
+        public int compare(Employee employee1, Employee employee2) {
+            if (employee1.getAge() != employee2.getAge()) {
+                return Integer.compare(employee1.getAge(), employee2.getAge());
+            }
+            return employee1.getName().compareTo(employee2.getName());
         }
-        return employee1.getName().compareTo(employee2.getName());
     };
 
     public Set<Employee> getEmployByOrder(List<Employee> employees) {
