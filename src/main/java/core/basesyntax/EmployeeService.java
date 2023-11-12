@@ -2,8 +2,8 @@ package core.basesyntax;
 
 import java.util.Comparator;
 import java.util.List;
-import java.util.Set;
 import java.util.TreeSet;
+import java.util.Set;
 
 public class EmployeeService {
 
