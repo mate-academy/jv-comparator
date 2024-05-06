@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class EmployeeService {
-    Comparator<Employee> comparator = new Comparator<Employee>() {
+    private Comparator<Employee> comparator = new Comparator<Employee>() {
         @Override
         public int compare(Employee employee1, Employee employee2) {
 
