@@ -14,7 +14,7 @@ public class EmployeeService {
         return firstEmployee.getName().compareTo(secondEmployee.getName());
     };
 
-    public Set<Employee> getEmployByOrder(List<Employee> employees) {
+    public Set<Employee> getEmployeesByOrder(List<Employee> employees) {
         Set<Employee> orderedEmployees = new TreeSet<>(employeeComparator);
         orderedEmployees.addAll(employees);
 
