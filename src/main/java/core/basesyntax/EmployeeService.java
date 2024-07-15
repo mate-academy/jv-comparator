@@ -7,14 +7,15 @@ import java.util.TreeSet;
 
 public class EmployeeService {
     public Set<Employee> getEmployByOrder(List<Employee> employees) {
-        Set<Employee> employeeSet = new TreeSet<>(employeeComparator());
+        Comparator<Employee> employeeComparator = employeeComparator();
+        Set<Employee> employeeSet = new TreeSet<>(employeeComparator);
         employeeSet.addAll(employees);
         return employeeSet;
     }
 
-    private Comparator<Employee> employeeComparator() {
+    public static Comparator<Employee> employeeComparator() {
         return (o1, o2) -> {
-            int result = o1.getAge() - o2.getAge();
+            int result = Integer.compare(o1.getAge(), o2.getAge());
             if (result == 0) {
                 result = o1.getName().compareTo(o2.getName());
             }
