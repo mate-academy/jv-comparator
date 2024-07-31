@@ -17,7 +17,7 @@ public class EmployeeService {
                 if (ageCompared != 0) {
                     return ageCompared;
                 }
-                return o1.getName().compareTo(o2.getName());
+                return o1.getName().compareToIgnoreCase(o2.getName());
             }
         };
 
