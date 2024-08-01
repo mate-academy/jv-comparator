@@ -10,7 +10,7 @@ public class EmployeeService {
         if (employees == null) {
             throw new IllegalArgumentException("Input list cannot be null");
         }
-        Comparator<Employee> employeeComparator = new Comparator<Employee>() {
+        Comparator<Employee> employeeComparator = new Comparator<>() {
             @Override
             public int compare(Employee o1, Employee o2) {
                 int ageCompared = Integer.compare(o1.getAge(), o2.getAge());
