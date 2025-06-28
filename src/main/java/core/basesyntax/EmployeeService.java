@@ -1,6 +1,9 @@
 package core.basesyntax;
 
-import java.util.*;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class EmployeeService {
 
@@ -15,7 +18,7 @@ public class EmployeeService {
                 if (compareAge == 0) {
                     return employee1.getName().compareTo(employee2.getName());
                 }
-                    return Integer.compare(employee1.getAge(), employee2.getAge());
+                return compareAge;
             }
         };
         Set<Employee> employeeSet = new TreeSet<Employee>(employeeComparator);
