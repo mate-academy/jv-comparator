@@ -5,6 +5,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class EmployeeService {
+    // nazwa metody dopasowana do testów
     public Set<Employee> getEmployByOrder(List<Employee> employees) {
 
         Set<Employee> sortedEmployees = new TreeSet<>((e1, e2) -> {
@@ -12,7 +13,7 @@ public class EmployeeService {
             if (ageCompare != 0) {
                 return ageCompare; // młodszy pierwszy
             }
-            return e1.getName().compareTo(e2.getName()); // alfabetycznie jeśli wiek taki sam
+            return e1.getName().compareTo(e2.getName()); // alfabetycznie przy tym samym wieku
         });
 
         sortedEmployees.addAll(employees);
