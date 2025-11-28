@@ -6,7 +6,7 @@ import java.util.TreeSet;
 
 public class EmployeeService {
     // nazwa metody dopasowana do testów
-    public Set<Employee> getEmployByOrder(List<Employee> employees) {
+    public Set<Employee> getEmployeeByOrder(List<Employee> employees) {
 
         Set<Employee> sortedEmployees = new TreeSet<>((e1, e2) -> {
             int ageCompare = Integer.compare(e1.getAge(), e2.getAge());
