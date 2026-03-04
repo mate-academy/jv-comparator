@@ -7,6 +7,7 @@ import java.util.TreeSet;
 
 public class EmployeeService {
     private static final int EQUALS_OF_EMPLOYEES_AGE_OR_NAME = 0;
+
     public Set<Employee> getEmployByOrder(List<Employee> employees) {
         Comparator<Employee> comparator = new Comparator<Employee>() {
 
