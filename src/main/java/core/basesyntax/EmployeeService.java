@@ -18,7 +18,7 @@ public class EmployeeService {
         }
     };
 
-        public Set<Employee> getEmployByOrder(List<Employee> employees) {
+        public Set<Employee> getEmployeeByOrder(List<Employee> employees) {
             Set<Employee> sortedEmployees = new TreeSet<>(employeeComparator);
             sortedEmployees.addAll(employees);
             return sortedEmployees;
