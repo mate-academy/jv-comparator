@@ -11,7 +11,7 @@ public class EmployeeService implements Comparator<Employee> {
         return Integer.compare(employee1.getAge(), employee2.getAge());
     }
 
-    public Set<Employee> getEmployByOrder(List<Employee> employees) {
+    public Set<Employee> getEmployeeByOrder(List<Employee> employees) {
         Set<Employee> sortedEmployees = new TreeSet<>(this);
         sortedEmployees.addAll(employees);
         return sortedEmployees;
